@@ -3,7 +3,7 @@ package gestionEleves;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Eleve {
+public class Eleve extends GroupeEleves{
     private String nom;
     private ArrayList<Double> listeNotes;
     private Double moyenne;
@@ -24,12 +24,6 @@ public class Eleve {
         return listeNotes;
     }
     public void ajouterNote(double note) throws NoteInvalide {
-//        try{
-//            if (note<0 || note>20)
-//                listeNotes.add(note);
-//        }
-//        catch (Exception NoteInavlide){
-//        }
         if (note<0||note>20)
             throw new NoteInvalide("La note inseree est invalide");
         else listeNotes.add(note);
