@@ -2,9 +2,10 @@ package gestionEleves;
 
 import java.security.interfaces.ECKey;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GroupeEleves{
-    private ArrayList<Eleve>listeEleves;
+    private ArrayList<Eleve>listeEleves=new ArrayList<>();
 
     public GroupeEleves() {
         listeEleves=new ArrayList<Eleve>();
@@ -32,5 +33,14 @@ public class GroupeEleves{
         for (Eleve e:listeEleves){
             System.out.println(e.toString());
         }
+    }
+
+
+    //partie 4
+    public Eleve meilleurEleve(){
+        return Collections.max(listeEleves);
+    }
+    public void trierEleves(){
+        Collections.sort(listeEleves);
     }
 }
